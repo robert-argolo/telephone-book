@@ -1,0 +1,83 @@
+.container {
+    font-family: sans-serif;
+    font-size: 120%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100vh;
+}
+
+input {
+    height: 18px;
+}
+
+.block {
+    width: calc(100% - 32px);
+    margin: 0 auto;
+}
+
+.block__add {
+    margin-bottom: 15px;
+}
+
+.block__search {
+    margin-bottom: 15px;
+}
+
+.list__item {
+    position: relative;
+    width: 325px;
+    margin-bottom: 15px;
+}
+
+.btn__add {
+    padding: 5px;
+    color: #fff;
+    background-color: limegreen;
+    border-radius: 5px;
+}
+
+.btn__add:hover {
+    cursor: pointer;
+}
+
+.btn__add:focus {
+    outline: none;
+}
+
+.btn__delete {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    display: inline-block;
+    padding: 5px;
+    color: #fff;
+    background-color: tomato;
+    border-radius: 5px;
+}
+
+.btn__delete:hover {
+    cursor: pointer;
+}
+
+.btn__delete:focus {
+    outline: none;
+}
+
+.input__name.error,
+.input__phone.error {
+    border-color: tomato;
+}
+
+.input__name.error::placeholder,
+.input__phone.error::placeholder {
+    color: tomato;
+}
+
+.hidden{
+    display: none;
+}
