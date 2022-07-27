@@ -14,24 +14,23 @@
     <div class="container">
         <h1 class="title">AGENDA TELEFÔNICA</h1>
 
-        <div class="all-inputs">
-            <input class="input__search" type="text" placeholder="Filtrar contato">
-            <div class="inputs__add-group">
-                <input class="input__name" type="text" placeholder="Nome">
-                <input class="input__phone" type="tel" placeholder="telefone celular">
-                <button class="btn__add-contact">Adicionar contato</button>
-            </div>
+        <input class="input__search" type="text" placeholder="Filtrar contato">
+        <div class="inputs__add-group">
+            <input class="input-add input__name" type="text" placeholder="Nome">
+            <input class="input-add input__phone" type="tel" placeholder="telefone celular">
+            <button class="btn__add-contact">+</button>
         </div>
 
         <ol class="contacts-list">
             <!-- <li class="list__item" v-for="(item, index) in filteredContacts(search)" :key="index">
                 </li> -->
 
-            <!-- <li class="list__contact">
-                <span>${contact.name}</span>
-                <span>${contact.phone}</span>
-                <button class="btn__delete" onclick="removeContact('${contact.name}')">Remover</button>
-            </li> -->
+
+            <li class="list__item">
+                <span>robert </span>
+                <span>79996310121</span>
+                <button class="btn__delete" >-</button>
+            </li>
 
         </ol>
     </div>

@@ -1,8 +1,8 @@
-const inputFilterContacts = document.querySelector('.block__search');
+const inputFilterContacts = document.querySelector('.input__search');
 const inputName = document.querySelector('.input__name');
 const inputPhone = document.querySelector('.input__phone');
-const btnAddContact = document.querySelector('.btn__add__contact');
-const contacstList = document.querySelector('.list');
+const btnAddContact = document.querySelector('.btn__add-contact');
+const contacstList = document.querySelector('.contacts-list');
 // const listItem = document.querySelectorAll('.list__item');
 
 const minLengthInputName = 1;
@@ -55,10 +55,10 @@ const createContactsList = () => {
     contacstList.innerHTML = '';
     arrayContacts.forEach(contact => {
         contacstList.innerHTML +=
-            `<li class="list__contact">
+            `<li class="list__item">
             <span>${contact.name}</span>
             <span>${contact.phone}</span>
-            <button class="btn__delete" onclick="removeContact('${contact.name}')">Remover</button>
+            <button class="btn__delete" onclick="removeContact('${contact.name}')">-</button>
 </li>`
     })
 }
