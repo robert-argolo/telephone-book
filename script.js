@@ -1,7 +1,7 @@
 const inputFilterContacts = document.querySelector('.block__search');
 const inputName = document.querySelector('.input__name');
 const inputPhone = document.querySelector('.input__phone');
-const btnAddContact = document.querySelector('.btn__add');
+const btnAddContact = document.querySelector('.btn__add__contact');
 const contacstList = document.querySelector('.list');
 // const listItem = document.querySelectorAll('.list__item');
 
@@ -55,10 +55,10 @@ const createContactsList = () => {
     contacstList.innerHTML = '';
     arrayContacts.forEach(contact => {
         contacstList.innerHTML +=
-            `<li class="list__item" v-for="(item, index) in filteredContacts(search)" :key="index">
+            `<li class="list__contact">
             <span>${contact.name}</span>
             <span>${contact.phone}</span>
-            <button class="btn__delete" type="button" onclick="removeContact('${contact.name}')">Excluir</button>
+            <button class="btn__delete" onclick="removeContact('${contact.name}')">Remover</button>
 </li>`
     })
 }

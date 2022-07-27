@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,25 +9,32 @@
     <link rel="stylesheet" href="./styles.css" />
     <script defer src="./script.js"></script>
 </head>
+
 <body>
     <div class="container">
+        <h1 class="title">AGENDA TELEFÔNICA</h1>
 
-        <div class="block">
-            <h2 class="block__title">Agenda telefônica</h2>
-            <input class="block__search" type="text" v-model="search" placeholder="Filtrar contato..">
-            <div class="block__add">
-                <input class="input__name" :class="{'error': isEmptyNameField}" placeholder="Name"
-                    v-model.trim="name" ref="input-name">
-                <input type="tel" class="input__phone" :class="{'error': isEmptyPhoneField}"
-                    placeholder="Phone number" v-model.number.trim="phone" ref="input-phone">
-                <button class="btn__add" type="button" @click="addContact()">Adicionar contato</button>
+        <div class="all-inputs">
+            <input class="input__search" type="text" placeholder="Filtrar contato">
+            <div class="inputs__add-group">
+                <input class="input__name" type="text" placeholder="Nome">
+                <input class="input__phone" type="tel" placeholder="telefone celular">
+                <button class="btn__add-contact">Adicionar contato</button>
             </div>
-            <ol class="list block__list">
-                <!-- <li class="list__item" v-for="(item, index) in filteredContacts(search)" :key="index">
-                </li> -->
-                
-            </ol>
         </div>
+
+        <ol class="contacts-list">
+            <!-- <li class="list__item" v-for="(item, index) in filteredContacts(search)" :key="index">
+                </li> -->
+
+            <!-- <li class="list__contact">
+                <span>${contact.name}</span>
+                <span>${contact.phone}</span>
+                <button class="btn__delete" onclick="removeContact('${contact.name}')">Remover</button>
+            </li> -->
+
+        </ol>
     </div>
 </body>
+
 </html>
